@@ -24,6 +24,6 @@ class Configure:
 
     def handle_args(self):
         if self.args.nvim:
-
+            pass
     def get_home_directory(self) -> pathlib.PosixPath:
         return self.home_directory
