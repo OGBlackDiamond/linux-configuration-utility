@@ -1,8 +1,5 @@
-import os
 import pathlib
 import shutil
-
-from configure import Configure
 
 
 class NeoVim:
@@ -12,7 +9,7 @@ class NeoVim:
     lua_directory: pathlib.PosixPath
     plugins_directory: pathlib.PosixPath
 
-    def __init__(self, configure: Configure) -> None:
+    def __init__(self, configure) -> None:
         self.nvim_directory = configure.get_home_directory().joinpath(".config/nvim/")
         self.lua_directory = self.nvim_directory.joinpath("lua/")
         self.plugins_directory = self.lua_directory.joinpath("plugins/")
@@ -23,7 +20,7 @@ class NeoVim:
         self.plugins_directory.mkdir(parents=True, exist_ok=True)
 
     def copy_all(self) -> None:
-        shutil.copytree("src/", self.nvim_directory)
+        shutil.copytree("src/", self.nvim_directory, dirs_exist_ok=False)
 
     def remove_all(self) -> None:
         shutil.rmtree(self.nvim_directory)
