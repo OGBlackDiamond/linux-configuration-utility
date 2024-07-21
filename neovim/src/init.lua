@@ -16,3 +16,5 @@ vim.opt.rtp:prepend(lazypath)
 require("option-bindings")
 
 require("lazy").setup("plugins")
+
+vim.cmd("Neotree")

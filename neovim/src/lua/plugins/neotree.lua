@@ -27,9 +27,13 @@ return {
                     never_show = {},
                 },
             },
+            follow_current_file = {
+                enabled = true,
+                leave_dirs_open = true,
+            }
         })
         vim.keymap.set("n", "<C-[>", ":Neotree filesystem show left<CR>", {})
         vim.keymap.set("n", "<C-]>", ":Neotree filesystem close<CR>", {})
-        vim.keymap.set("n", "<C-\\>", ":Neotree filesystem focus<CR>", {})
+        --vim.keymap.set("n", "<C-\\>", ":Neotree filesystem focus<CR>", {})
     end,
 }

@@ -13,6 +13,10 @@ vim.cmd("set nowrap")
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>wq", ":wa<CR>:qa<CR>", {})
-vim.keymap.set("n", "<leader>T", ":10split<CR><C-w>j:terminal<CR>i")
 vim.keymap.set("n", "<leader>t", ":vsplit<CR>")
+
+-- raw terminal functionality
+vim.keymap.set("n", "<leader>T", ":10split<CR><C-w>j:terminal<CR>i")
 vim.keymap.set('t', '<leader>Q', "<C-\\><C-n><C-w>k",{silent = true})
+
+
