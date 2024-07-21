@@ -34,6 +34,6 @@ return {
         })
         vim.keymap.set("n", "<C-[>", ":Neotree filesystem show left<CR>", {})
         vim.keymap.set("n", "<C-]>", ":Neotree filesystem close<CR>", {})
-        --vim.keymap.set("n", "<C-\\>", ":Neotree filesystem focus<CR>", {})
+        vim.keymap.set("n", "<C-\\>", ":Neotree filesystem focus<CR>", {})
     end,
 }
